@@ -2,21 +2,21 @@
 @startuml
 [*] -> トップページ
 トップページ -> ログイン : ログインボタンをクリック
-トップページ -> about : aboutボタンをクリック
-トップページ -> product : productをクリック
-トップページ -> checkout : chckoutをクリック
 ログイン : entry/ID,PASSWORDを入力
 ログイン : do/ログイン認証
+トップページ -> about : aboutボタンをクリック
 about : サイトの詳細を表示
-product : おすすめを表示
-chckout : カートの中を表示
-product --> トップページ : 戻るをクリック
 about --> トップページ : 戻るをクリック
-chckout --> トップページ : 戻るをクリック
+トップページ -> product : productをクリック
+product : おすすめを表示
+product --> トップページ : 戻るをクリック
 product -> 商品詳細 : 商品をクリック
 商品詳細 : do/商品詳細を表示
 商品詳細 -> chckout : カートに商品を追加
 商品詳細 --> トップページ : 戻るをクリック
+トップページ -> checkout : chckoutをクリック
+chckout : カートの中を表示
+chckout --> トップページ : 戻るをクリック
 
 state chckout内 {
  [*] --> カート
