@@ -13,12 +13,12 @@ product : おすすめを表示
 product --> トップページ : 戻るをクリック
 product -> 商品詳細 : 商品をクリック
 商品詳細 : do/商品詳細を表示
-商品詳細 -> chckout : カートに商品を追加
+商品詳細 -> checkout : カートに商品を追加
 商品詳細 --> トップページ : 戻るをクリック
-トップページ -> checkout : chckoutをクリック
+トップページ -> checkout : checkoutをクリック
 checkout : カートの中を表示
 
-state chckout内 {
+state checkout内 {
  [*] --> カート
  カート -> 注文 : 注文をクリック
  カート -> カート : 数量を変更/商品を削除
