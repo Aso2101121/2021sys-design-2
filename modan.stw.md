@@ -10,7 +10,7 @@ about : サイトの詳細を表示
 about --> トップページ : 戻るをクリック
 トップページ -> checkout : checkoutをクリック
 checkout : カートの中を表示
-checkout -up-> トップページ : 戻るをクリック
+checkout -up-> product : 戻るをクリック
 checkout -up-> トップページ : ログアウトをクリック
 トップページ -> product : productをクリック
 product : おすすめを表示
