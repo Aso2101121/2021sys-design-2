@@ -10,8 +10,8 @@ about : サイトの詳細を表示
 about --> トップページ : 戻るをクリック
 トップページ -> checkout : checkoutをクリック
 checkout : カートの中を表示
-checkout -up-> product : 戻るをクリック
-checkout -up-> トップページ : ログアウトをクリック
+checkout --> product : 戻るをクリック
+checkout --> トップページ : ログアウトをクリック
 トップページ -> product : productをクリック
 product : おすすめを表示
 product --> トップページ : 戻るをクリック
@@ -21,7 +21,7 @@ product -> 商品詳細 : 商品をクリック
 商品詳細 --> トップページ : 戻るをクリック
 
 
-state checkout内 {
+state checkout {
  [*] --> カート
  カート -> 注文 : 注文をクリック
  カート -> カート : 数量を変更/商品を削除
