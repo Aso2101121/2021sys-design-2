@@ -1,13 +1,15 @@
 ```uml
 @startuml
 [*] -> トップページ
-トップページ -> ログイン : ログインボタンをクリック
+トップページ -left-> ログイン : ログインボタンをクリック
 ログイン : entry/ID,PASSWORDを入力
 ログイン : do/ログイン認証
 ログイン --> トップページ : 戻るをクリック
-トップページ -> about : aboutボタンをクリック
+トップページ -left-> about : aboutボタンをクリック
 about : サイトの詳細を表示
 about --> トップページ : 戻るをクリック
+トップページ -> checkout : checkoutをクリック
+checkout : カートの中を表示
 トップページ -> product : productをクリック
 product : おすすめを表示
 product --> トップページ : 戻るをクリック
@@ -15,8 +17,7 @@ product -> 商品詳細 : 商品をクリック
 商品詳細 : do/商品詳細を表示
 商品詳細 -> checkout : カートに商品を追加
 商品詳細 --> トップページ : 戻るをクリック
-トップページ -> checkout : checkoutをクリック
-checkout : カートの中を表示
+
 
 state checkout内 {
  [*] --> カート
