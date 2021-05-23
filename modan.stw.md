@@ -17,7 +17,6 @@ product -> 商品詳細 : 商品をクリック
 商品詳細 --> トップページ : 戻るをクリック
 トップページ -> checkout : chckoutをクリック
 chckout : カートの中を表示
-chckout --> トップページ : 戻るをクリック
 
 state chckout内 {
  [*] --> カート
