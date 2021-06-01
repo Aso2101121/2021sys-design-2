@@ -1,4 +1,4 @@
-'''md
+'''uml
 @startuml
 alice -> Bob: Repuest
 Bob --> Alice: Response
