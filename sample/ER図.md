@@ -26,7 +26,6 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
 entity "購入テーブル" as order <d_purchase><<D,TRANSACTION_MARK_COLOR>>{
   + order_id [PK]
   --
-  order_id
   customer_code
   purchase_date
   total_price
@@ -36,8 +35,6 @@ entity "購入テーブル詳細" as detail <d_purchase_detail><<D,TRANSACTION_M
   + detail_id [PK]
   + order_id [PK]
   --
-  detail_id
-  order_id
   item_code
   price
   num
@@ -46,10 +43,20 @@ entity "購入テーブル詳細" as detail <d_purchase_detail><<D,TRANSACTION_M
 entity "カテゴリテーブル" as category <m_category><<D,TRANSACTION_MARK_COLOR>>{
   + category_id [PK]
   --
-  category_id
   name
   reg_date
 }
 
+entity "商品テーブル" as item <m_items><<M,MASTER_MARK_COLOR>>{
+  + item_code [PK]
+  + category_id [FK]
+  --
+  item_name
+  price
+  image
+  detail
+  del_flag
+  reg_date
+}
 @enduml
 ```
