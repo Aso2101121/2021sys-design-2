@@ -31,7 +31,7 @@ entity "購入テーブル" as order <d_purchase><<T,TRANSACTION_MARK_COLOR>>{
   total_price
 }
 
-entity "購入テーブル詳細" as detail <d_purchase_detail><<T,TRANSACTION_MARK_COLOR>>{
+entity "購入詳細テーブル" as detail <d_purchase_detail><<T,TRANSACTION_MARK_COLOR>>{
   + detail_id [PK]
   + order_id [PK]
   --
@@ -58,5 +58,8 @@ entity "商品マスタ" as item <m_items><<M,MASTER_MARK_COLOR>>{
   del_flag
   reg_date
 }
+
+customer -o-le-|{  order
+order    ---ri-|{  detail
 @enduml
 ```
