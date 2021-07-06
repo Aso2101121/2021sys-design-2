@@ -10,6 +10,7 @@ skinparam class {
     'リレーションの色
     ArrowColor Black
 }
+
 entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
   + customer code [PK]
   --
@@ -20,6 +21,17 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
   mail
   del_flag
   reg.date
+}
+
+entity "購入テーブル詳細" as detail <d_purchase_detail><<M,MASTER_MARK_COLOR>>{
+  + detail_id [pk]
+  order_id [pk]
+  --
+  detail_id
+  order_id
+  item_code
+  price
+  num
 }
 @enduml
 ```
