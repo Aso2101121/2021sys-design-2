@@ -59,7 +59,7 @@ entity "商品マスタ" as item <m_items><<M,MASTER_MARK_COLOR>>{
   reg_date
 }
 
-customer -o-le-|[  order
-order    ---ri-|[  detail
+customer -o-le-|[ order
+order ---ri-|[ detail
 @enduml
 ```
