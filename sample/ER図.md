@@ -59,9 +59,9 @@ entity "商品マスタ" as item <m_items><<M,MASTER_MARK_COLOR>>{
   reg_date
 }
 
-customer |o--o{ order
-order    ||--|{ detail
-detail   }--||  item
-item     }o--|| category
+customer |o-ri-o{ order
+order    ||-ri-|{ detail
+detail   }-do-||  item
+item     }o-le-|| category
 @enduml
 ```
