@@ -23,7 +23,7 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
   reg.date
 }
 
-entity "購入テーブル詳細" as detail <d_purchase_detail><<M,MASTER_MARK_COLOR>>{
+entity "購入テーブル詳細" as detail <d_purchase_detail><<D,MASTER_MARK_COLOR>>{
   + detail_id [pk]
   order_id [pk]
   --
