@@ -8,7 +8,7 @@
 ## DBテーブル詳細一覧
 AUTO_INCREMENT 自動採番を表す
 *****
-### 顧客情報テーブル
+### 顧客情報マスタ(m_customers)
 |   和名   |      属性名    | 型(カラム名)  | PK | FK | NN |      備考      |
 |----------|:--------------|:--------------|-----|----|----|----------------|
 |顧客ID    |customer_id    |int(10)        |〇   |-   |〇  |AUTO_INCRIMENT  |
@@ -16,9 +16,8 @@ AUTO_INCREMENT 自動採番を表す
 |電話番号  |customer_tel   |int(25)        |-    |-   |〇  |-               |
 |メールアドレス|customer_email|varchar(100)|-    |    |〇  |-               |
 |住所      |customer_adress|varchar(100)   |-    |-   |〇  |-               |
-|商品コード|item_id        |int(10)        |-    |〇  |〇  |商品テーブル参照 |
-|商品名    |item_name      |varchar(100)   |-    |-   |〇  |-               |
-|購入日    |item_reg_date  |date           |-    |-   |〇  |-               |
+|商品ID    |item_id        |int(10)        |-    |〇  |〇  |商品テーブル参照 |
+|最終購入日|f_reg_date     |date           |-    |-   |〇  |-               |
 
 *****
 ### ログインテーブル
