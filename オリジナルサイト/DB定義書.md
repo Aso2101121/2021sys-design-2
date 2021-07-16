@@ -8,7 +8,7 @@
 ## DBテーブル詳細一覧
 AUTO_INCREMENT 自動採番を表す
 *****
-### 顧客情報マスタ
+### 顧客情報テーブル
 |   和名   |      属性名    | 型(カラム名)  | PK | FK | NN |      備考      |
 |----------|:--------------|:--------------|-----|----|----|----------------|
 |顧客ID    |customer_id    |int(10)        |〇   |-   |〇  |AUTO_INCRIMENT  |
@@ -16,7 +16,7 @@ AUTO_INCREMENT 自動採番を表す
 |電話番号  |customer_tel   |int(25)        |-    |-   |〇  |-               |
 |メールアドレス|customer_email|varchar(100)|-    |    |〇  |-               |
 |住所      |customer_adress|varchar(100)   |-    |-   |〇  |-               |
-|商品コード|item_id        |int(10)        |-    |〇  |〇  |商品マスタ参照   |
+|商品コード|item_id        |int(10)        |-    |〇  |〇  |商品テーブル参照 |
 |商品名    |item_name      |varchar(100)   |-    |-   |〇  |-               |
 |購入日    |item_reg_date  |date           |-    |-   |〇  |-               |
 
@@ -35,7 +35,7 @@ AUTO_INCREMENT 自動採番を表す
 |アイテムID|item_id        |int(10)        |〇    |-   |〇 |AUTO＿INCLEMENT |
 |商品名    |item_name      |varchar(20)    |-     |-   |〇 |-               |
 |価格      |price          |int(6)         |-     |-   |〇 |-               |
-|仕入ID    ||||||
+|仕入ID    |supplier_id    |int(10)        |-     |〇  |〇 |仕入先マスタ参照 |
 |画像ファイル|image        |varchar(250)   |-     |-   |〇 |-               |
 |商品詳細  |detail         |varchar(500)   |-     |-   |-  |デフォルト値:null|
 |削除フラグ|del_flag       |int(11)        |-     |-   |-  |デフォルト値:null|
@@ -58,7 +58,7 @@ AUTO_INCREMENT 自動採番を表す
 |   和名   |      属性名    | 型(カラム名)  | PK | FK | NN |      備考      |
 |----------|:---------------|:-------------|-----|----|----|----------------|
 |オーダーID|order_id        |int(10)       |〇    |-   |〇  |AUTO＿INCLEMENT |
-|顧客コード|customer_code   |varchar(50)   |-    |-    |〇  |-               |
+|顧客ID    |customer_id     |int(10)       |-    |-    |〇  |顧客テーブル参照|
 |購入日    |purchase_date   |date          |-    |-    |〇  |-               |
 |総計      |total_price     |int(15)       |-    |-    |〇  |-               |
 *****
@@ -68,6 +68,6 @@ AUTO_INCREMENT 自動採番を表す
 |----------|:---------------|:-------------|-----|----|----|----------------|
 |購入ID    |detail_id       |int(10)        |〇  |-   |〇  |AUTO_INCREMENT  |
 |オーダーID|order_id        |int(10)        |〇  |-   |〇  |デフォルト値:0  |
-|商品コード|item_code       |int(10)        |-   |-   |〇  |-               |
+|商品コード|item_code       |int(10)        |-   |-   |〇  |商品テーブル参照|
 |価格      |price           |int(6)         |-   |-   |〇  |-               |
 |数量      |num             |int(10)        |-   |-   |〇  |デフォルト値:0   |
