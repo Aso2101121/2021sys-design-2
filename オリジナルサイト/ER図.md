@@ -70,12 +70,12 @@ entity "購入詳細テーブル" as detail <d_purchase_detail> <<T,TRANSACTION_
  num
 }
 
-customer   ---ri-o{  items
-items      }o-ri---  supplier
+customer   ----o{  items
+items      }o----  supplier
 customer   ---do-o{  order
 items      ---do--- detail
-order      }o-le--- detail
-rogin     ---ri---customer
+order      }o-ri--- detail
+rogin     ------customer
 
 @enduml
 ```
