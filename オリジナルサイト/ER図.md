@@ -71,10 +71,10 @@ entity "購入詳細テーブル" as detail <d_purchase_detail> <<T,TRANSACTION_
 }
 
 customer   ---ri-o{  items
-items      }o-ri-|{  supplier
+items      }o-ri---  supplier
 customer   ---do-o{  order
 items      ---do--- detail
-order      }o---- detail
+order      }o-le--- detail
 rogin     ---ri---customer
 
 @enduml
