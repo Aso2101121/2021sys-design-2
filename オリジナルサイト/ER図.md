@@ -70,7 +70,7 @@ entity "購入詳細テーブル" as detail <d_purchase_detail> <<T,TRANSACTION_
  num
 }
 
-customer   ---ri-0{  items
+customer   ---ri-o{  items
 
 @enduml
 ```
