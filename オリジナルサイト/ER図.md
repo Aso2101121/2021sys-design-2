@@ -74,7 +74,7 @@ customer   ---ri-o{  items
 items      }o-ri---  supplier
 customer   ---do-o{  order
 items      ---do--- detail
-order      }o-le--- detail
+order      }o-ri--- detail
 rogin     ---ri---customer
 
 @enduml
