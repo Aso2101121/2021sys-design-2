@@ -12,6 +12,29 @@ skinparam class {
     ArrowColor Black
 }
 
+entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARKCOLOR>>{
+ + order_id [PK]
+ + customer_code[PK][FK]
+ --
+ parcharse_date
+ total_price
+}
+
+entity "購入テーブル詳細テーブル" as purchase_detail <d_purcharse_detail><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
+ + detail_id [PK]
+ + order_id [PK]
+ --
+ item_code
+ price
+ num
+}
+
+entity "ユーザ（顧客）マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
+ + customer_code [PK]
+ --
+ 
+
+
 entity "顧客情報マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>>{
  + customer id [PK]
  --
@@ -30,52 +53,13 @@ entity "ログインテーブル" as rogin <d_rogin> <<T,TRANSACTION_MARK_COLOR>
  email
 }
 
-entity "商品テーブル" as items <M_items> <<M,MASTER_MARK_COLOR>>{
- + item_id [PK]
- --
- item_name
- price
- supplier_id [FK]
- image
- detail
- del_flag
- reg_date
-}
-
-entity "仕入先テーブル" as supplier <d_supplier> <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
- + supplier_id [PK]
- + item_id [PK][FK]
- --
- supplier
- adress
- tel
- email
- reg_date
-}
-
-entity "購入テーブル" as order <d_order> <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
- + order_id [PK]
- --
- customer_id [FK]
- purchase_date
- total_price
-}
-
-entity "購入詳細テーブル" as detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
- + detail_id [PK]
- + order_id [PK][FK]
- --
- item_code [FK]
- price
- num
-}
-
+/*
 customer   ---ri-o{  items
 items      }o-ri---  supplier
 customer   ---do-o{  order
 items      ---do--- detail
 order      }o-ri--- detail
 rogin     ---ri---customer
-
+*/
 @enduml
 ```
