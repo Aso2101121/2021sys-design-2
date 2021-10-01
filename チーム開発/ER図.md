@@ -62,13 +62,5 @@ entity "商品テーブル" as item <d_item><<T,TRANSACTION_MARK_COLOR>>MAIN_ENT
  
 
 
-/*
-customer   ---ri-o{  items
-items      }o-ri---  supplier
-customer   ---do-o{  order
-items      ---do--- detail
-order      }o-ri--- detail
-rogin     ---ri---customer
-*/
 @enduml
 ```
