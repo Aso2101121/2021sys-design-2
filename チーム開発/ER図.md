@@ -101,5 +101,6 @@ entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
  reg_date
 }
 
+
 @enduml
 ```
