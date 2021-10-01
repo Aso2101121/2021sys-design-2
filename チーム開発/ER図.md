@@ -12,7 +12,7 @@ skinparam class {
     ArrowColor Black
 }
 
-entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARKCOLOR>>{
+entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARK_COLOR>>{
  + order_id [PK]
  + customer_code[PK][FK]
  --
