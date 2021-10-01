@@ -48,7 +48,7 @@ entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MAR
  regdate
 }
 
-entity "商品テーブル" as item <d_item><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
+entity "商品マスタ" as item <M_item><<M,MASTER_MARK_COLOR>>{
  + item_code
  --
  item_name
