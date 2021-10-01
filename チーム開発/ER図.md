@@ -20,7 +20,7 @@ entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARK_COLOR>>{
  total_price
 }
 
-entity "購入テーブル詳細テーブル" as purchase_detail <d_purcharse_detail><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
+entity "購入詳細テーブル" as purchase_detail <d_purcharse_detail><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
  + detail_id [PK]
  + order_id [PK]
  --
@@ -60,6 +60,46 @@ entity "商品マスタ" as item <M_item><<M,MASTER_MARK_COLOR>>{
  reg_date
 }
  
+entity "お気に入りテーブル" as favorite <d_favorite><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
+ + favorite_id [PK]
+ + customer_code [PK][FK]
+ --
+ item_name
+}
+
+entity "退会テーブル" as withdrawal <d_withdrawal><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
+ + with_id [PK]
+ --
+ customer_code
+ with_date
+ option
+}
+
+entity "カートテーブル" as cart <d_cart><<T,TRANSACTION>>MAIN_ENTITY{
+ + cart_id [PK]
+ + customer_code [PK]
+ + item_code [PK]
+ --
+ cart_num
+}
+
+entity "商品変更テーブル" as itemChange <d_itemChange><<T,TRANSACTION>>MAIN_ENTITY{
+ + change_id [PK]
+ + item_code [PK][FK]
+ --
+ change_flg
+ change_text
+ change_index
+}
+ 
+entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
+ + maker_id [PK]
+ --
+ maker_name
+ adress
+ tel
+ reg_date
+}
 
 
 @enduml
