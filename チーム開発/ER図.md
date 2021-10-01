@@ -32,26 +32,35 @@ entity "購入テーブル詳細テーブル" as purchase_detail <d_purcharse_de
 entity "ユーザ（顧客）マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
  + customer_code [PK]
  --
+ name
+ pass
+ address
+ tel
+ mail
+ del_flag
+ reg_date
+}
+
+entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
+ + category_id [PK]
+ --
+ name
+ regdate
+}
+
+entity "商品テーブル" as item <d_item><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
+ + item_code
+ --
+ item_name
+ price
+ image
+ text
+ detail
+ del_flag
+ reg_date
+}
  
 
-
-entity "顧客情報マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>>{
- + customer id [PK]
- --
- customer_name
- customer_tel
- customer_email
- customer_adress
- item_id [FK]
- f_lreg_date
-}
-
-entity "ログインテーブル" as rogin <d_rogin> <<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
- + rogin_id [PK]
- --
- password
- email
-}
 
 /*
 customer   ---ri-o{  items
