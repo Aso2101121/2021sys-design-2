@@ -47,7 +47,6 @@ AUTO_INCREMENT…自動採番
 |商品コード     |item_code     |int(11)       |〇  |-   |〇  |デフォルト値:0|
 |商品名         |item_name     |varchar(20)   |-   |-   |〇  |-             |
 |金額           |price         |int(11)       |-   |-   |〇  |-             |
-|カテゴリーID   |category_id   |int(11)       |-   |〇  |〇  |-             |
 |商品画像       |image         |varchar(200)  |-   |-   |〇  |-             |
 |商品説明       |text          |varchar(500)  |-   |-   |-   |-             |
 |商品詳細       |datail        |varchar(500)  |-   |-   |-   |デフォルト値:NULL|
@@ -86,8 +85,9 @@ AUTO_INCREMENT…自動採番
 |--------------|--------------|--------------------|----|----|----|--------------|
 |ID            |change_id     |int(11)             |〇  |-   |〇   |AUTO-ENCREMENT|
 |商品コード     |item_code     |int(11)             |-   |〇  |〇   |商品テーブル参照|
-|変更フラグ     |change_flg    |char(1)             |-   |-   |〇  |-              |
-|変更したい値   |change_index  |varchar(200)        |-   |-   |〇  |-              |
+|変更フラグ     |change_flg    |char(1)             |-   |-   |〇  |-             |
+|変更したいテキスト|change_text |varchar(200)       |-  |-    |-   |-             |
+|変更したい値   |change_index  |int(6)              |-   |-   |-  |-              |
 
 *****
 ### メーカーマスタ ###
