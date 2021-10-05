@@ -107,7 +107,7 @@ item      }o-do---   cart
 purchase  }o-le---   customer
 purchase  ---ri---   purchase_detail
 customer  ---up-||   withdrawal
-customer      }o-ri-||   favorite
+customer  }o-le-||   favorite
 
 
 
