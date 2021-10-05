@@ -104,7 +104,9 @@ entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
 item      ---ri-o{   itemChange
 item      }o-le---   maker
 item      }o-do---   cart
-purchace  }o-le-o-   customer
+purchace  }o-le---   customer
+purchase  ---ri---   purchase_detail
+
 
 
 @enduml
