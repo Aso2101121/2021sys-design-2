@@ -105,11 +105,12 @@ item      ---ri-o{   itemChange
 item      }o-le---   maker
 item      }o-do---   cart
 item      }o-up---   category
+item       ------    purchase
 purchase  }o-le---   customer
-purchase  ---ri---   purchase_detail
+purchase  ---up---   purchase_detail
 customer  ---up-||   withdrawal
 customer  }o-le-||   favorite
-
+customer   ------    cart
  
 @enduml
 ```
