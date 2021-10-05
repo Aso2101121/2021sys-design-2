@@ -101,8 +101,8 @@ entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
  reg_date
 }
 
-
-item   ---le---   maker
+item   ---ri-o{   itemChange
+item   ---le-o{   maker
 
 @enduml
 ```
