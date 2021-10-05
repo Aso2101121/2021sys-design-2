@@ -22,7 +22,7 @@ entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARK_COLOR>>{
 
 entity "購入詳細テーブル" as purchase_detail <d_purcharse_detail><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
  + detail_id [PK]
- + order_id [PK]
+ + order_id [PK][FK]
  --
  item_code
  price
