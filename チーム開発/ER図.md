@@ -75,7 +75,7 @@ entity "退会テーブル" as withdrawal <d_withdrawal><<T,TRANSACTION_MARK_COL
  option
 }
 
-entity "カートテーブル" as cart <d_cart><<T,TRANSACTION>>MAIN_ENTITY{
+entity "カートテーブル" as cart <d_cart><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
  + cart_id [PK]
  + customer_code [PK]
  + item_code [PK]
