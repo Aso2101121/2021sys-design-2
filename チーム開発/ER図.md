@@ -104,11 +104,11 @@ entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
 item      ---ri-o{   itemChange
 item      }o-le---   maker
 item      }o-do---   cart
+item      }o-up---   category
 purchase  }o-le---   customer
 purchase  ---ri---   purchase_detail
 customer  ---up-||   withdrawal
 customer  }o-le-||   favorite
-
 
 
 @enduml
