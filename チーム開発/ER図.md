@@ -83,7 +83,7 @@ entity "カートテーブル" as cart <d_cart><<T,TRANSACTION_MARK_COLOR>>MAIN_
  cart_num
 }
 
-entity "商品変更テーブル" as itemChange <d_itemChange><<T,TRANSACTION>>MAIN_ENTITY{
+entity "商品変更テーブル" as itemChange <d_itemChange><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
  + change_id [PK]
  + item_code [PK][FK]
  --
