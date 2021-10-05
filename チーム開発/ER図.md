@@ -109,6 +109,7 @@ purchase  }o-le---   customer
 purchase  ---ri---   purchase_detail
 customer  ---up-||   withdrawal
 customer  }o-le-||   favorite
+customer  ---do-o{   cart
 
 
 @enduml
