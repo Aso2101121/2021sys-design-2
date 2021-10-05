@@ -106,6 +106,8 @@ item      }o-le---   maker
 item      }o-do---   cart
 purchace  }o-le---   customer
 purchase  ---ri---   purchase_detail
+customer  ---ri-||   withdrawal
+item      }o-ri-||   favorite
 
 
 
