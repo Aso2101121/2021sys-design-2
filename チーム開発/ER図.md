@@ -51,8 +51,8 @@ entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MAR
 
 entity "商品マスタ" as item <M_item><<M,MASTER_MARK_COLOR>>{
  + item_code [PK]
+ + maker_id [PK][FK]
  --
- 
  item_name
  price
  image
@@ -72,15 +72,15 @@ entity "お気に入りテーブル" as favorite <d_favorite><<T,TRANSACTION_MAR
 entity "退会テーブル" as withdrawal <d_withdrawal><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
  + with_id [PK]
  --
- customer_code
+ customer_code [FK]
  with_date
  option
 }
 
 entity "カートテーブル" as cart <d_cart><<T,TRANSACTION_MARK_COLOR>>MAIN_ENTITY{
  + cart_id [PK]
- + customer_code [PK]
- + item_code [PK]
+ + customer_code [PK][FK]
+ + item_code [PK][FK]
  --
  cart_num
 }
