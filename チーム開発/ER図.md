@@ -17,6 +17,7 @@ entity "購入マスタ" as purchase <m_purchase><<M,MASTER_MARK_COLOR>>{
  + customer_code [PK][FK]
  --
  purcharse_date
+ derivery_date
  total_price
 }
 
@@ -49,8 +50,9 @@ entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MAR
 }
 
 entity "商品マスタ" as item <M_item><<M,MASTER_MARK_COLOR>>{
- + item_code
+ + item_code [PK]
  --
+ 
  item_name
  price
  image
