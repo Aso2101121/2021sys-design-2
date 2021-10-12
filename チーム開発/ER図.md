@@ -107,7 +107,7 @@ item      ---ri-o{   itemChange
 item      }o-le---   maker
 item      }o-do---   cart
 item      }o-up---   category
-item       ------    purchase
+item       }-----    purchase
 purchase  }o-le---   customer
 purchase  ---up---   purchase_detail
 customer  ---up-||   withdrawal
