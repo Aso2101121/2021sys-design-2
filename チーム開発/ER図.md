@@ -30,7 +30,7 @@ entity "購入詳細テーブル" as purchase_detail <d_purcharse_detail><<T,TRA
  num
 }
 
-entity "ユーザ（顧客）マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
+entity 顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
  + customer_code [PK]
  --
  name
@@ -49,7 +49,7 @@ entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MAR
  regdate
 }
 
-entity "商品マスタ" as item <M_item><<M,MASTER_MARK_COLOR>>{
+entity "商品マスタ" as item <m_item><<M,MASTER_MARK_COLOR>>{
  + item_code [PK]
  + maker_id [PK][FK]
  --
@@ -94,7 +94,7 @@ entity "商品変更テーブル" as itemChange <d_itemChange><<T,TRANSACTION_MA
  change_index
 }
  
-entity "メーカーマスタ" as maker <M_maker><<M,MASTER_MARK_COLOR>>{
+entity "メーカーマスタ" as maker <m_maker><<M,MASTER_MARK_COLOR>>{
  + maker_id [PK]
  --
  maker_name
