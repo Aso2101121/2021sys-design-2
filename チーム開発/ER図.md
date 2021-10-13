@@ -46,8 +46,8 @@ entity "顧客情報変更テーブル" as customerChange <d_customerChange><<T,
  + id [PK]
  + customer_code [PK][FK]
  --
- change_item
- change_text
+ c_change_item
+ c_change_text
 entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
  + category_id [PK]
  --
