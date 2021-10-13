@@ -42,6 +42,12 @@ entity "顧客マスタ" as customer <m_customers><<M,MASTER_MARK_COLOR>>{
  reg_date
 }
 
+entity "顧客情報変更テーブル" as customerChange <d_customerChange><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
+ + id [PK]
+ + customer_code [PK][FK]
+ --
+ change_item
+ change_text
 entity "カテゴリーテーブル" as category <d_category><<T,TRANSACTION_MARK_COLOR>> MAIN_ENTITY{
  + category_id [PK]
  --
@@ -109,6 +115,7 @@ item      }o-do---   cart
 item      }o-up---   category
 item       }-----    purchase
 purchase  }o-le---   customer
+customer  ---do-o{   customerChange
 purchase  ---up---   purchase_detail
 customer  ---up-||   withdrawal
 customer  }o-le-||   favorite
