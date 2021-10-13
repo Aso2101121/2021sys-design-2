@@ -118,7 +118,7 @@ item      }o-up---   category
 item       }--le---    purchase
 purchase  }o-le---   customer
 customer  ---do-o{   customerChange
-purchase  ---up---   purchase_detail
+purchase  ------   purchase_detail
 customer  ---up-||   withdrawal
 customer  }o-le-||   favorite
  
